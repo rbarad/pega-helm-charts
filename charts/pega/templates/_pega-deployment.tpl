@@ -118,8 +118,6 @@ spec:
           limits:
           {{- if .node.cpuLimit }}
             cpu: "{{ .node.cpuLimit }}"
-          {{- else }}
-            cpu: 4
           {{- end }}
           {{- if .node.memLimit }}
             memory: "{{ .node.memLimit }}"
