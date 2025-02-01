@@ -1,0 +1,12 @@
+name: List Directory Contents On Demand
+
+on:
+  workflow_dispatch:
+
+jobs:
+  list-directory:
+    runs-on: self-hosted
+
+    steps:
+      - name: List contents of the root directory
+        run: ls -la /home/barar/work/code/prpc-platform
