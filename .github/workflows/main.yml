@@ -10,3 +10,6 @@ jobs:
     steps:
       - name: List contents of the root directory
         run: ls -la /home/barar/work/code/prpc-platform
+
+      - name: Checkout to master
+        run: git branch && git checkout master && git branch
