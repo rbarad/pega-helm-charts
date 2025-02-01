@@ -15,5 +15,4 @@ jobs:
         run: ls -la "$PRPC_PLATFORM_DIR"
 
       - name: Checkout to master
-        working-directory: "$PRPC_PLATFORM_DIR"
-        run: git branch && git checkout master && git branch
+        run: cd "$PRPC_PLATFORM_DIR" && git branch && git checkout master && git branch
