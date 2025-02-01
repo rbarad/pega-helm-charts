@@ -9,10 +9,11 @@ env:
 jobs:
   list-directory:
     runs-on: self-hosted
-
     steps:
       - name: List contents of the root directory
         run: ls -la "$PRPC_PLATFORM_DIR"
-
+  Checkout-code:
+    runs-on: self-hosted
+    steps:
       - name: Checkout to master
         run: cd "$PRPC_PLATFORM_DIR" && git branch && git checkout master && git branch
