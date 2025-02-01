@@ -1,4 +1,4 @@
-name: List Directory Contents On Demand
+name: List Directory Contents and checkout the branch On Demand
 
 on:
   workflow_dispatch:
