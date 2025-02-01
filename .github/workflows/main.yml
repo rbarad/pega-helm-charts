@@ -3,13 +3,17 @@ name: List Directory Contents On Demand
 on:
   workflow_dispatch:
 
+env:
+  PRPC_PLATFORM_DIR: /home/barar/work/code/prpc-platform
+
 jobs:
   list-directory:
     runs-on: self-hosted
 
     steps:
       - name: List contents of the root directory
-        run: ls -la /home/barar/work/code/prpc-platform
+        run: ls -la "$PRPC_PLATFORM_DIR"
 
       - name: Checkout to master
+        working-directory: "$PRPC_PLATFORM_DIR"
         run: git branch && git checkout master && git branch
