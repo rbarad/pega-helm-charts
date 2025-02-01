@@ -8,6 +8,7 @@ env:
 
 jobs:
   list-directory:
+    name: list the directory "$PRPC_PLATFORM_DIR"
     runs-on: self-hosted
     steps:
       - name: List contents of the root directory
